@@ -1,0 +1,10 @@
+#!/bin/sh
+lb config noauto \
+    --distribution bookworm \
+    --archive-areas "main contrib non-free non-free-firmware" \
+    --debian-installer none \
+    --bootappend-live "boot=live components quiet" \
+    --binary-images iso-hybrid \
+    --memtest none \
+    --win32-loader false \
+    "$@"
